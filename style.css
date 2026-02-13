@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root{
+
+    --lead: #212121;
+    --gold-finger: #f2bd12;
+    --eye-ball: #fffdf7;
+    --hint-yellow: #fcf1cc;
+    --pure-white: #fff;
+}
+
+body{
+    background: var(--eye-ball);
+}
+
+/* Basic Styling */
+
+a{
+    text-decoration: none;
+    color: var(--lead);
+    font-size: 1rem;
+}
+
+.flex{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+}
+.between{
+    justify-content: space-between;
+}
+
+.gap-2{
+    gap: 2rem;
+}
+.gap-3{
+    gap: 3rem;
+}
+.wrapper{
+    max-width: 1400px;
+    margin: auto;
+    padding-inline: 1.5rem;
+}
+
+/* header styling */
+
+.navbar{
+    min-height: 14vh;
+
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gold-finger);
+}
+
+.btn{
+    display: inline-block;
+    padding: .5rem;
+    background: var(--gold-finger);
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: var(--pure-white);
+    box-shadow: rgba(0, 0, 0, 0.435) 0 2px 1px;
+
+}
+
+.btn :hover{
+    background-color: var(--lead);
+
+}
+.cart-icon{
+
+    color: var(--lead);
+    font-size: 1.3rem;
+}
+.cart-icon .cart-value{
+    position: absolute;
+    top: 50px;
+    right: -10;
+    width: 20px;
+    font-size: .85rem;
+    background: var(--gold-finger);
+    border-radius: 100vw;
+    aspect-ratio: 1;
+    color: var(lead);
+    text-align: center;
+    line-height: 20px;
+    
+
+}
+.desktop-action .humburger{
+    font-size: 1.5rem;
+    display: none;
+}
+.desktop-action{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.mobile-menu{
+  display: none; 
+
+}
+/* section styling */
+
+/* footer styling */
+
+
+/* media queries */
+
+@media screen and (max-width: 780px) {
+    .navlist,
+    .desktop-action .btn{
+        display: none;
+    }
+
+    .desktop-action,
+    .humburger{
+        display: block;
+    }
+    .mobile-menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 20%;
+        left: 100%;
+        transform:translateX(-50%) ;
+        padding: 2rem;
+        width: 20rem;
+        background: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
+        border-radius: 5%;
+        box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 8px,
+        rgba(0, 0, 0, 0.5) 8px 8px 8px inset;
+        transition: all .5s ease-in-out;
+    }
+    .mobile-menu-active{
+        left: 50%;
+        transform: translateX();
+    }
+}
+
+
+
+
