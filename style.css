@@ -29,7 +29,7 @@ a{
 .flex{
     
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
     list-style: none;
@@ -69,6 +69,10 @@ img{
     margin-top: 4rem;
 }
 
+.mt-half{
+    margin-top: .7rem;
+}
+
 /* HEADER STYLING */
 
 .navbar{
@@ -103,11 +107,11 @@ img{
     font-size: 1.3rem;
 }
 .cart-icon .cart-value{
-    position: absolute;
-    top: 7%;
-    right: 23%;
+    position: relative;
+    top: .5rem;
+    right: 27%;
     width: 20px;
-    font-size: .85rem;
+    font-size: 1.2rem;
     background: var(--gold-finger);
     border-radius: 100vw;
     aspect-ratio: 1;
@@ -259,9 +263,40 @@ h3{
     height: 100%;
 }
 
-.review-container{
-    background-color: blue;
+.profile{
+    width: 4rem;
+    border-radius: 100vw;
+    aspect-ratio: 1;
+    overflow: hidden;
 }
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fa-star{
+    color: var(--gold-finger);
+}
+
+.arrow{
+    width: 2.5rem;
+    background: var(--gold-finger);
+    border-radius: 1.5rem;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 2.5rem;
+    color: var(--lead);
+}
+
+.review-container{
+    width: 650px;
+    max-width: 100%;
+
+}
+
+
+
 
 .social-icon :hover {
     background: var(--lead);
