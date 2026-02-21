@@ -1,15 +1,7 @@
-// import React from "react";
 
-// React.createElement('h1',{key:1})
-
-
-
-
-function  palindumCheck(value){
-    let reversed = value.split("").reverse().join("")
-    return reversed === value
-}
-
-let ans = palindumCheck("madhavi")
-console.log(ans)
-
+var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });

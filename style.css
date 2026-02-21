@@ -18,7 +18,7 @@ body{
     background: var(--eye-ball);
 }
 
-/* Basic Styling */
+/* BASIC STYLING */
 
 a{
     text-decoration: none;
@@ -31,6 +31,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
 
 }
@@ -50,7 +51,25 @@ a{
     padding-inline: 1.5rem;
 }
 
-/* header styling */
+
+img{
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.humburger{
+    color: var();
+}
+
+
+
+.mt-4{
+    margin-top: 4rem;
+}
+
+/* HEADER STYLING */
 
 .navbar{
     min-height: 14vh;
@@ -85,8 +104,8 @@ a{
 }
 .cart-icon .cart-value{
     position: absolute;
-    top: 50px;
-    right: -10;
+    top: 7%;
+    right: 23%;
     width: 20px;
     font-size: .85rem;
     background: var(--gold-finger);
@@ -98,10 +117,7 @@ a{
     
 
 }
-.desktop-action .humburger{
-    font-size: 1.5rem;
-    display: none;
-}
+
 .desktop-action{
     display: flex;
     justify-content: space-around;
@@ -112,22 +128,172 @@ a{
   display: none; 
 
 }
-/* section styling */
+/* SECTION STYLING*/
 
-/* footer styling */
+
+
+
+
+.hero-section{
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.image-container,
+.service-card
+{
+    flex: 1;
+    flex-basis: 300px;
+}
+
+h1{
+    font-size: 4vw;
+    color: var(--lead);
+
+}
+
+h1 span{
+    color: var(--gold-finger);
+}
+
+
+p{
+    font-size: 1rem;
+    color: gray;
+    line-height: 1rem;
+    font-weight: 300;
+}
+
+.para{
+    margin-block: 2rem;
+    max-width: 550px;
+}
+
+
+.social-icon{
+    background: var(--hint-yellow);
+    width: 3rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    aspect-ratio: 1;
+    line-height: 3rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+    transition: .5s ease-in-out;
+
+}
+/* SECTION-01 */
+
+.p-top{
+    margin-top: 20px;
+
+}
+
+.text-center{
+   text-align: center;
+   margin-top: 4rem;
+
+}
+
+ h5{
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gold-finger);
+}
+
+ h2{
+    font-size:2rem;
+    text-align: center;
+    color: var(--lead);
+}
+
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--lead);
+}
+.service-card h3{
+    margin-top: 2rem;
+    margin: 1rem;
+}
+
+/* SECTION-02 */
+
+
+.order-card img{
+    width: 15rem;
+    filter: drop-shadow(
+        rgba(0, 0, 0, 0.63) 0 10px 10px
+    );
+
+}
+
+.order-card{
+        flex: 1;
+        flex-basis: 300px;
+        background: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
+        border-radius: 2rem;
+        padding: 0 1rem 2rem 1rem;
+        margin: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+        rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        
+}
+.h4{
+    padding: 1.5rem;
+    
+}
+
+.order-card .price{
+    font-size: 1.5rem;
+    padding: 1.3rem 0 2rem 0;
+    color: var(--gold-finger);
+}
+
+/* SECTION -03 */
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.review-container{
+    background-color: blue;
+}
+
+.social-icon :hover {
+    background: var(--lead);
+    color: var(--pure-white);
+}
+/* FOOTER STYLING */
 
 
 /* media queries */
 
 @media screen and (max-width: 780px) {
+
+    /* HEADER STYLING */
     .navlist,
     .desktop-action .btn{
         display: none;
     }
 
-    .desktop-action,
+    /* .desktop-action,
     .humburger{
         display: block;
+        
+    } */
+    .desktop-action .humburger{
+        max-width: 200px;
+        font-size: 1.5rem;
+    display: none;
+}
+
+    .humburger{
+        color: var(--lead);
+        
     }
     .mobile-menu{
         list-style: none;
@@ -138,7 +304,7 @@ a{
         gap: 1.5rem;
         position: absolute;
         top: 20%;
-        left: 100%;
+        left: -100%;
         transform:translateX(-50%) ;
         padding: 2rem;
         width: 20rem;
@@ -148,10 +314,30 @@ a{
         box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 8px,
         rgba(0, 0, 0, 0.5) 8px 8px 8px inset;
         transition: all .5s ease-in-out;
+        display: none;
     }
     .mobile-menu-active{
         left: 50%;
-        transform: translateX();
+        transform: translateX(-50%);
+    }
+
+    /* SECTION STYLING */
+    h1{
+        font-size: 3.6rem;
+        
+    }
+    .content{
+        padding-top: 3rem ;
+
+    }
+    .gap-2{
+        gap: 1.4rem;
+
+ 
+    }
+    .gap-4{
+        gap: 1.4rem;
+
     }
 }
 
