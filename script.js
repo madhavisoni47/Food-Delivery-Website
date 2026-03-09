@@ -56,7 +56,52 @@ async function loadProducts() {
   const response = await fetch('./products.json');
   const products = await response.json();
 
-  console.log(products);
-}
+  // console.log(products);
 
-loadProducts();
+
+const cardList = document.querySelector(".card-list")
+
+
+  products.forEach(element => {
+  console.log(element)
+  let orderCard = document.createElement("div")
+  orderCard.classList.add("order-card")
+
+  let imgCard = document.createElement("div");
+  imgCard.classList.add("card-image");
+
+  let imgTag = document.createElement("img");
+  imgTag.src = element.image;
+
+  let foodName = document.createElement("h4")
+  foodName.innerText = element.name
+  let price = document.createElement("h4")
+  price.classList.add("price")
+  price.innerText = element.price
+
+  let btn = document.createElement("a")
+  btn.classList.add("btn")
+  btn.innerText = "Add To Card"
+
+
+
+
+  imgCard.appendChild(imgTag);
+  orderCard.appendChild(imgCard);
+  orderCard.appendChild(foodName)
+  orderCard.appendChild(price)
+  orderCard.appendChild(btn)
+  cardList.appendChild(orderCard);
+
+});
+
+
+
+
+
+
+
+
+
+}
+loadProducts()
